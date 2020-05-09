@@ -15,7 +15,7 @@ def tests(*args,num):
             assert arbre==[[45,[1,2]],[21,[3,4]],[54,[5,6]],[7,[]],[28,[-1,7]],[50,[]],[89,[]],[41,[]]], "L'arbre implémenté n'est pas correct"
         elif num==3:
             var_arbre=[[45,[1,2]],[21,[3,4]],[54,[5,6]],[7,[]],[28,[-1,7]],[50,[]],[89,[]],[41,[]]], "Les listes 'val' et 'ind' retournée par la fonction interne() ne sont pas correctes"
-            assert interne(var_arbre)==([45, 21, 54], [0, 1, 2])
+            assert interne(var_arbre)==[45, 21, 54], [0, 1, 2]
         #---------------------------------------------------------------------
         #---------------------------------------------------------------------
         stop_test = time.time()
