@@ -11,7 +11,7 @@ def tests(*args,num):
         if num==1:
             pile_emp=[1,2,3]
             empiler(pile_emp,4)
-            assert pile_emp==[1,2,3,4,5],"La pile retournée par la fonction empiler() n'est pas correcte"
+            assert pile_emp==[1,2,3,4],"La pile retournée par la fonction empiler() n'est pas correcte"
         
         elif num==2:
             pile_dep=[1,2,3]
