@@ -11,11 +11,14 @@ def tests(*args,num):
         if num==1:
             var_A=[[52,[1,2,3]],[21,[4]],[54,[]],[45,[5,6]],[22,[]],[53,[]],[15,[]]]
             assert recherche_pere(var_A, 53)==45, "La valeur retournée du père par la fonction n'est pas correcte"
+        
         elif num==2:
             assert arbre==[[45,[1,2]],[21,[3,4]],[54,[5,6]],[7,[]],[28,[-1,7]],[50,[]],[89,[]],[41,[]]], "L'arbre implémenté n'est pas correct"
+        
         elif num==3:
             var_arbre=[[45,[1,2]],[21,[3,4]],[54,[5,6]],[7,[]],[28,[-1,7]],[50,[]],[89,[]],[41,[]]]
             assert interne(var_arbre)[0]==[45, 21, 54], "La liste 'val' retournée par la fonction n'est pas correcte"
+            
             assert interne(var_arbre)[1]==[0, 1, 2], "La liste 'ind' retournée par la fonction n'est pas correcte"
         #---------------------------------------------------------------------
         #---------------------------------------------------------------------
