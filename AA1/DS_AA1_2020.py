@@ -54,7 +54,7 @@ jQuery(document).bind("contextmenu", function(e) {
     e.preventDefault();});
 	
 var cpt=0;
-IPython.notebook.kernel.execute("cpt = '" + cpt + "'");
+IPython.notebook.kernel.execute("cpt = '" + 0 + "'");
 Jupyter.notebook.execute_cells([5]);
 
 window.addEventListener('blur', (event) => {
