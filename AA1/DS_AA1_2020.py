@@ -54,7 +54,7 @@ jQuery(document).bind("contextmenu", function(e) {
     e.preventDefault();});
 	
 var cpt=0;
-IPython.notebook.kernel.execute("cpt = '" + 0 + "'")
+IPython.notebook.kernel.execute("cpt = '" + cpt + "'")
 
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
