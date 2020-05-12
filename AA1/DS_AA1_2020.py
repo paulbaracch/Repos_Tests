@@ -55,12 +55,14 @@ jQuery(document).bind("contextmenu", function(e) {
 	
 var cpt=0;
 var markdown_cell = IPython.notebook.get_cell(5);
+markdown_cell.set_text('Vous avez quitté 0 fois la page');
+Jupyter.notebook.execute_cell(5);
 
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
     alert("Vous n'avez pas le droit de quitter la page")
     markdown_cell.set_text('Vous avez quitté ' + cpt +' fois la page');
-    //IPython.notebook.execute_cell(5);
+    Jupyter.notebook.execute_cell(5);
     
 });
 """
