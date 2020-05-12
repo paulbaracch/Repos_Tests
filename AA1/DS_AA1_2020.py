@@ -54,8 +54,6 @@ jQuery(document).bind("contextmenu", function(e) {
     e.preventDefault();});
 	
 var cpt=0;
-IPython.notebook.kernel.execute("cpt = '" + 0 + "'");
-Jupyter.notebook.execute_cells([5]);
 
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
@@ -67,3 +65,4 @@ window.addEventListener('blur', (event) => {
 """
 display(IPython.core.display.Javascript(jscode_cmd))
 print("Vous pouvez commencer l'épreuve")
+display(Javascript('IPython.notebook.execute_cell(5)'))
