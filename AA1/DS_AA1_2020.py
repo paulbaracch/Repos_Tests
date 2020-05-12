@@ -1,4 +1,5 @@
 import time,IPython.core.display
+from IPython.display import Javascript
 
 def tests(*args,num):
     try:
@@ -54,15 +55,16 @@ jQuery(document).bind("contextmenu", function(e) {
     e.preventDefault();});
 	
 var cpt=0;
-IPython.notebook.kernel.execute("cpt = '" + cpt + "'")
 
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
     alert("Vous n'avez pas le droit de quitter la page")
-    IPython.notebook.kernel.execute("cpt = '" + cpt + "'")
-    Jupyter.notebook.execute_cells([5]);
+    var markdown_cell = IPython.notebook.get_cell(5);
+    markdown_cell.set_text('Vous avez quitté ' + cpt +' fois la page');
+    IPython.notebook.execute_cell(5);
     
 });
 """
 display(IPython.core.display.Javascript(jscode_cmd))
+display(Javascript("var markdown_cell = IPython.notebook.get_cell(5);markdown_cell.set_text('Vous avez quitté 0 fois la page');IPython.notebook.execute_cell(5)"))
 print("Vous pouvez commencer l'épreuve")
