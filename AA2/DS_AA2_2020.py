@@ -49,11 +49,13 @@ jQuery(document).bind("contextmenu", function(e) {
     e.preventDefault();});
 	
 var cpt=0;
+var markdown_cell = Jupyter.notebook.get_cell(5);
+
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
     alert("Vous n'avez pas le droit de quitter la page")
-    IPython.notebook.kernel.execute("cpt = '" + cpt + "'")
-    Jupyter.notebook.execute_cells([5]);
+    markdown_cell.set_text('Vous avez quitté ' + cpt +' fois la page');
+    Jupyter.notebook.execute_cells([5]);  
     
 });
 """
