@@ -55,8 +55,6 @@ jQuery(document).bind("contextmenu", function(e) {
 	
 var cpt=0;
 var markdown_cell = IPython.notebook.get_cell(5);
-markdown_cell.set_text('Vous avez quitté 0 fois la page');
-IPython.notebook.execute_cell(5);
 
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
