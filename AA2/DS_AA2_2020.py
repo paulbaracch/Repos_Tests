@@ -34,8 +34,6 @@ def tests(*args,num):
         print ("Test échoué en ",round(tps,2)," secondes",'\n')
         print("=========================== fin du test ===========================")
 
-def eval_compteur(cpt):
-    print("Vous avez quitté",cpt,"fois la page")
     
 # Commandes Javascript pour bloquer les accès Ctrl+C/Ctrl+V aux étudiants + compteur de sorties
  
