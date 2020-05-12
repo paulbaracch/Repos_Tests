@@ -1,5 +1,4 @@
 import time,IPython.core.display
-from IPython.display import Javascript
 
 def tests(*args,num):
     try:
@@ -55,6 +54,9 @@ jQuery(document).bind("contextmenu", function(e) {
     e.preventDefault();});
 	
 var cpt=0;
+var markdown_cell = IPython.notebook.get_cell(5);
+markdown_cell.set_text('Vous avez quitté 0 fois la page');
+IPython.notebook.execute_cell(5);
 
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
@@ -65,6 +67,5 @@ window.addEventListener('blur', (event) => {
     
 });
 """
-display(IPython.core.display.Javascript(jscode_cmd))
-display(Javascript("var markdown_cell = IPython.notebook.get_cell(5);markdown_cell.set_text('Vous avez quitté 0 fois la page\n Vous pouvez commencer l'examen');IPython.notebook.execute_cell(5)"))
 print("Vous pouvez commencer l'épreuve")
+display(IPython.core.display.Javascript(jscode_cmd))
