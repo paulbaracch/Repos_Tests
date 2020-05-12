@@ -54,14 +54,16 @@ jQuery(document).bind("contextmenu", function(e) {
     e.preventDefault();});
 	
 var cpt=0;
-var markdown_cell = IPython.notebook.get_cell(5);
+var markdown_cell = Jupyter.notebook.get_cell(5);
 
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
     alert("Vous n'avez pas le droit de quitter la page")
     markdown_cell.set_text('Vous avez quitté ' + cpt +' fois la page');
+    Jupyter.notebook.execute_cells([5]);
     
 });
 """
-print("Vous pouvez commencer l'examen")
+
 display(IPython.core.display.Javascript(jscode_cmd))
+print("Vous pouvez commencer l'examen")
