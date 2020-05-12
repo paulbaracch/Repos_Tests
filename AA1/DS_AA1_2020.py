@@ -63,6 +63,5 @@ window.addEventListener('blur', (event) => {
     
 });
 """
-
-display(IPython.core.display.Javascript(jscode_cmd))
 print("Vous pouvez commencer l'examen")
+display(IPython.core.display.Javascript(jscode_cmd))
