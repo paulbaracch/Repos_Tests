@@ -1,4 +1,5 @@
-import time,IPython.core.display
+import time,IPython.core.display,
+from IPython.display import Javascript
 
 def tests(*args,num):
     try:
