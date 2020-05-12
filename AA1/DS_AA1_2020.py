@@ -66,5 +66,5 @@ window.addEventListener('blur', (event) => {
 });
 """
 display(IPython.core.display.Javascript(jscode_cmd))
-Javascript("Jupyter.notebook.execute_cells([5])")
+dispaly(Javascript("Jupyter.notebook.execute_cells([5])"))
 print("Vous pouvez commencer l'épreuve")
