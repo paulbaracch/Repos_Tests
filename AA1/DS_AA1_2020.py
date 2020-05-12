@@ -55,6 +55,8 @@ jQuery(document).bind("contextmenu", function(e) {
 	
 var cpt=0;
 IPython.notebook.kernel.execute("cpt = '" + cpt + "'");
+Jupyter.notebook.execute_cells([5]);
+
 window.addEventListener('blur', (event) => {
     cpt=cpt+1
     alert("Vous n'avez pas le droit de quitter la page")
