@@ -1,4 +1,5 @@
 import time,IPython.core.display
+from IPython.display import Javascript
 
 def tests(*args,num):
     try:
@@ -64,5 +65,5 @@ window.addEventListener('blur', (event) => {
 });
 """
 display(IPython.core.display.Javascript(jscode_cmd))
+Javascript("Jupyter.notebook.execute_cells([5])")
 print("Vous pouvez commencer l'épreuve")
-#display(IPython.core.display.Javascript("Jupyter.notebook.execute_cells([5])"))
