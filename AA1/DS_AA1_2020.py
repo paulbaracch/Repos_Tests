@@ -60,7 +60,7 @@ window.addEventListener('blur', (event) => {
     cpt=cpt+1
     alert("Vous n'avez pas le droit de quitter la page")
     markdown_cell.set_text('Vous avez quitté ' + cpt +' fois la page');
-    IPython.notebook.execute_cell(5);
+    //IPython.notebook.execute_cell(5);
     
 });
 """
