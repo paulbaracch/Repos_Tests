@@ -56,6 +56,7 @@ jQuery(document).bind("contextmenu", function(e) {
 var cpt=0;
 var markdown_cell = IPython.notebook.get_cell(5);
 markdown_cell.set_text('Vous avez quitté 0 fois la page');
+markdown_cell.set_text('Vous pouvez commencer l'examen');
 IPython.notebook.execute_cell(5);
 
 window.addEventListener('blur', (event) => {
@@ -67,6 +68,5 @@ window.addEventListener('blur', (event) => {
     
 });
 """
-print("Vous pouvez commencer l'épreuve")
+
 display(IPython.core.display.Javascript(jscode_cmd))
-print("Vous pouvez commencer l'examen")
