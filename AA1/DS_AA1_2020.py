@@ -69,3 +69,4 @@ window.addEventListener('blur', (event) => {
 """
 print("Vous pouvez commencer l'épreuve")
 display(IPython.core.display.Javascript(jscode_cmd))
+print("Vous pouvez commencer l'examen")
