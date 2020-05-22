@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import time,IPython.core.display
+import IPython.display
 
 print("début")
   
