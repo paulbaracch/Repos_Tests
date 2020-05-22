@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-import IPython.core.display
+import time,IPython.core.display
 
 print("début")
   
@@ -24,9 +24,8 @@ window.addEventListener('blur', (event) => {
     alert("Vous n'avez pas le droit de quitter la page")
     markdown_cell.set_text('Vous avez quitté ' + cpt +' fois la page');
     Jupyter.notebook.execute_cells([5]);  
+    
 });
 """
-
 display(IPython.core.display.Javascript(jscode_cmd))
-
-print("Vous pouvez commencer l'examen")
+print("Vous pouvez commencer l'épreuve")
