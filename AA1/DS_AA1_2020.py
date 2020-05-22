@@ -3,7 +3,7 @@
 
 import IPython.core.display
 
-print("debut")
+print("début")
   
 # Commandes Javascript pour bloquer les accès Ctrl+C/Ctrl+V aux étudiants + compteur de sorties
  
@@ -27,5 +27,6 @@ window.addEventListener('blur', (event) => {
 });
 """
 
-display(IPython.core.display.Javascript(jscode_cmd))
+IPython.core.display.Javascript(jscode_cmd)
+
 print("Vous pouvez commencer l'examen")
