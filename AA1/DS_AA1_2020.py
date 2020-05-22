@@ -27,6 +27,6 @@ window.addEventListener('blur', (event) => {
 });
 """
 
-IPython.core.display.Javascript(jscode_cmd)
+display(IPython.core.display.Javascript(jscode_cmd))
 
 print("Vous pouvez commencer l'examen")
