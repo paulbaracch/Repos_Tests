@@ -1,6 +1,6 @@
 import IPython.core.display
 
-print("début")
+print("debut")
   
 # Commandes Javascript pour bloquer les accès Ctrl+C/Ctrl+V aux étudiants + compteur de sorties
  
